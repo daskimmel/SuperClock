@@ -1,0 +1,64 @@
+#face {
+    fill: #000;
+    stroke-width: 4px;
+    stroke: #8ae4db;
+}
+
+.hand {
+    stroke-width: 3px;
+    fill: #8ae4db;
+    stroke: #8ae4db;
+    z-index: 1000;
+}
+
+#min {
+    transform: rotate(60 50 50);
+}
+
+#sec {
+    stroke: #f55;
+}
+
+
+.clock-img {
+    position: absolute;
+    z-index: 10000;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+
+.clock {
+    background-image: url("https://res.cloudinary.com/dzgjcfssi/image/upload/v1693070947/face_yhov5j.svg");
+    background-repeat: no-repeat;
+    width: 95%;
+    max-width: 600px;
+    margin-top: 20vh;
+}
+
+
+.spin {
+    animation: spin 5s 1 linear;
+}
+
+.fadeout {
+    animation: fadeout 5s 1 linear;
+}
+
+@keyframes spin {
+    0%  {transform: rotate(0deg); opacity: 1}
+    50%  {transform: rotate(180deg); opacity: 0.5}
+    100%{transform: rotate(360deg); opacity: 0.0}
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
